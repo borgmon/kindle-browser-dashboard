@@ -1,0 +1,8 @@
+extends layout
+block content
+  .pure-img
+    img(src=path, alt=name)
+  script.
+      setTimeout(function () {
+        window.location = window.location.href.split("?")[0];
+      }, #{interval});
