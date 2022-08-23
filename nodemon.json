@@ -1,0 +1,8 @@
+{
+  "ext": "js, css, json, pug",
+  "events": {
+    "restart": "npx kill-port 8100",
+    "crash": "npx kill-port 8100"
+  },
+  "delay": "1500"
+}

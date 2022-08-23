@@ -1,0 +1,12 @@
+services:
+  kindle-browser-dashboard:
+    container_name: kindle-browser-dashboard
+    restart: unless-stopped
+    build: .
+    network_mode: host
+    ports:
+    - "8100:8100"
+    environment:
+      - HA_TOKEN=
+      - HA_URL=
+      - EXCLUDE_ENTITY=
