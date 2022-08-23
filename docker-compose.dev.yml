@@ -1,6 +1,6 @@
 services:
-  kindle-browser-dashboard:
-    container_name: kindle-browser-dashboard
+  kindle-ha-dashboard:
+    container_name: kindle-ha-dashboard
     restart: unless-stopped
     build: .
     network_mode: host
