@@ -4,8 +4,11 @@ var router = express.Router();
 const fs = require('fs');
 
 var ALBUM_PATH = 'images/album'
-var INTERVAL = process.env.INTERVAL || 1000
+var INTERVAL = process.env.INTERVAL || 60000
 INTERVAL = parseInt(INTERVAL)
+
+var SHOW_HEADER = process.env.SHOW_HEADER || 'false'
+SHOW_HEADER = Boolean(SHOW_HEADER)
 
 function shuffle(a) {
   var j, x, i;
@@ -21,7 +24,7 @@ function shuffle(a) {
 var photoList = []
 
 const listPhotos = () => {
-  p = path.resolve('src/public',ALBUM_PATH)
+  p = path.resolve('src/public', ALBUM_PATH)
   fs.readdir(p, (err, files) => {
     if (err) {
       console.log(err)
@@ -38,16 +41,15 @@ router.get('/', async (req, res, next) => {
   if (photoList.length === 0) {
     listPhotos()
   }
+  p = path.resolve('src/public', ALBUM_PATH, nextPhoto)
 
   res.render('album', {
     path: path.join(ALBUM_PATH, nextPhoto),
-    name: nextPhoto,
+    img,
     interval: INTERVAL,
+    showHeader: SHOW_HEADER,
+    currentPage: "/album",
   });
-});
-
-router.get('/shuffle', async (req, res, next) => {
-
 });
 
 module.exports = router;

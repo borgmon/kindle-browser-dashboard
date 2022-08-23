@@ -5,6 +5,9 @@ var router = express.Router();
 var INTERVAL = process.env.INTERVAL || 60000
 INTERVAL = parseInt(INTERVAL)
 
+var SHOW_HEADER = process.env.SHOW_HEADER || 'true'
+SHOW_HEADER = Boolean(SHOW_HEADER)
+
 function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
@@ -72,6 +75,8 @@ router.get('/', async (req, res, next) => {
     loading: req.query.loading,
     interval: INTERVAL,
     displayCheck,
+    showHeader: SHOW_HEADER,
+    currentPage: "/",
   });
 });
 

@@ -1,0 +1,10 @@
+block header
+  if showHeader
+    div(class='navi pure-menu pure-menu-horizontal')
+      .pure-g
+        if currentPage !== '/'
+          .pure-u-1
+            a(href="/" class='box-text') Go To Dashboard 
+        if currentPage !== '/album'  
+          .pure-u-1
+            a(href="/album" class='box-text') Go To Album 

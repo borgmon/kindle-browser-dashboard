@@ -1,13 +1,13 @@
-body{
+body {
     /* font-weight: bold; */
 }
 
-.box{
+.box {
     margin: .5em;
     text-align: center;
 }
 
-.box-border{
+.box-border {
     border-style: solid;
     border-width: .1em;
     border-color: black;
@@ -17,30 +17,43 @@ body{
 
 }
 
-.btn-container{
+.btn-container {
     margin: .3em;
 }
 
-.btn{
+.btn {
     background-color: black;
-    color:white;
+    color: white;
     margin: auto;
     min-width: 200px;
     width: 100%;
 }
 
-.black-box{
+.black-box {
     background-color: black;
     color: white;
 }
 
-.grey-box{
+.grey-box {
     background-color: gray;
     color: white;
 }
 
-.box-text{
+.box-text {
     color: black;
     text-decoration: none;
 
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navi {
+    /* background-color: gray; */
+    padding: .1em;
+    text-align: center;
+    margin: auto;
 }

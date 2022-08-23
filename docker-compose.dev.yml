@@ -10,3 +10,5 @@ services:
       - HA_TOKEN=
       - HA_URL=
       - EXCLUDE_ENTITY=
+      - INTERVAL=
+      - SHOW_HEADER=
