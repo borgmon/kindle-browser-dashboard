@@ -5,6 +5,8 @@ The website is based on pug, with purecss. AKA extremely tiny to run. NO js*. Op
 
 *js only for refreshing the page with customizable intervals.
 
+![demo](demo.jpeg)
+
 ## Install
 You will need a server to run this.
 First clone the repo
